@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+#page1 {
+  background-color: #3498db;
+}
+
+#page2 {
+  background-color: #e74c3c;
+}
+
+#page3 {
+  background-color: #2ecc71;
+}
+
+#page4 {
+  background-color: #f1c40f;
+}

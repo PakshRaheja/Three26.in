@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Boxes with Rhombus Layout</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hover-box-container">
+            <div class="hover-box">
+                <div class="hover-box-text" style="transform: rotate(0deg);">DESIGN</div>
+                <video class="hover-box-video" muted>
+                    <source src="./assets/videos/design.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hover-box-content">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="hover-box">
+                <div class="hover-box-text">IDEATE</div>
+                <video class="hover-box-video" muted>
+                    <source src="./assets/videos/ideate.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hover-box-content">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="hover-box">
+                <div class="hover-box-text" >DEVELOP</div>
+                <video class="hover-box-video" muted>
+                    <source src="./assets/videos/develop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hover-box-content">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="hover-box">
+                <div class="hover-box-text" style="transform: rotate(0deg);">DELIVER</div>
+                <video class="hover-box-video" muted>
+                    <source src="./assets/videos/deliver.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hover-box-content">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <img src="./assets/images/Component 31.png" alt="Center Image" class="center-image">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hoverBoxes = document.querySelectorAll('.hover-box');
+
+            hoverBoxes.forEach(box => {
+                const video = box.querySelector('.hover-box-video');
+
+                box.addEventListener('mouseenter', () => {
+                    video.play();
+                });
+
+                box.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0; // Reset video to the start
+                });
+            });
+        });
+    </script>
+</body>
+</html>

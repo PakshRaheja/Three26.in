@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "syne", sans-serif;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.hover-box-container {
+  display: grid;
+  grid-template-areas: 
+      " . box1 . "
+      "box2 center box3"
+      " . box4 . ";
+  gap: 30px;
+  position: relative;
+}
+
+.hover-box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* .hover-box:hover {
+  transform: translateY(-10px);
+} */
+
+.hover-box-text, .hover-box-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.hover-box-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  transform: rotate(-90deg);
+  background-color: #fff;
+}
+
+.hover-box-video {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hover-box:hover .hover-box-text {
+  opacity: 0;
+}
+
+.hover-box:hover .hover-box-video {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hover-box-content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.hover-box:hover .hover-box-content {
+  opacity: 1;
+}
+
+.hover-box h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.hover-box p {
+  margin: 10px 0 0;
+}
+
+.hover-box:nth-child(1) {
+  grid-area: box1;
+}
+
+.hover-box:nth-child(2) {
+  grid-area: box2;
+}
+
+.hover-box:nth-child(3) {
+  grid-area: box3;
+}
+
+.hover-box:nth-child(4) {
+  grid-area: box4;
+}
+
+.center-image {
+  margin-top: 10%;
+  margin-left: 20%;
+  grid-area: center;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+}

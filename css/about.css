@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+.home {
+  font-family: "syne", sans-serif;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.shop {
+  font-size: 4vw;
+  margin: 100px;
+  margin-bottom: 20px !important;
+  font-weight: bolder;
+  font-family: "syne", sans-serif;
+}
+
+.overlay {
+  display: none;
+}
+
+.navbar {
+  padding: 0.5rem;
+  width: 100%;
+  min-height: 50px;
+  overflow: hidden;
+  font-family: "syne", sans-serif;
+  background-color: #ffffff;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  position: sticky;
+  position: relative;
+  z-index: 70;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+  transition: .3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.links ul {
+  display: flex;
+  list-style: none;
+}
+
+
+
+.links a {
+  display: inline-block;
+  color: black;
+  margin-left: 4.5rem;
+  transition: .3s;
+  font-size: 20px;
+}
+
+.links a:hover {
+  transform: scale(1.1);
+}
+
+.icon img {
+  width: 20px;
+  margin: 20px;
+  transition: .3s;
+}
+
+.icon :hover {
+  transform: scale(1.1);
+}
+
+
